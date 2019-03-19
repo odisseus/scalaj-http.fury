@@ -1,0 +1,8 @@
+.bsp
+.fury
+.idea
+.layer.fury.bak
+*.class
+*.log
+*.jar
+target

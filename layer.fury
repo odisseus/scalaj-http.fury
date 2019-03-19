@@ -1,0 +1,84 @@
+version	3
+schemas	default	id	default
+		projects	scalaj-http	id	scalaj-http
+				modules	core	id	core
+						kind	Library
+						main	None
+						plugin	None
+						manifest	
+						compiler	projectId	scala
+							moduleId	compiler
+							intransitive	true
+							hidden	false
+						after	
+						params	
+						sources	scalaj-http:src/main/java	scalaj-http:src/main/java
+							scalaj-http:src/main/scala	scalaj-http:src/main/scala
+							src	src
+						binaries	
+						resources	
+						bloopSpec	None
+					test	id	test
+						kind	Application
+						main	Some	org.junit.runner.JUnitCore
+						plugin	None
+						manifest	
+						compiler	projectId	scala
+							moduleId	compiler
+							intransitive	true
+							hidden	false
+						after	scalaj-http/core	projectId	scalaj-http
+								moduleId	core
+								intransitive	false
+								hidden	false
+						params	
+						sources	scalaj-http:src/test/scala	scalaj-http:src/test/scala
+						binaries	com.fasterxml.jackson.module:jackson-module-scala_2.12:2.9.7	binRepo	sonatype:releases
+								group	com.fasterxml.jackson.module
+								artifact	jackson-module-scala_2.12
+								version	2.9.7
+							com.novocode:junit-interface:0.11	binRepo	central
+								group	com.novocode
+								artifact	junit-interface
+								version	0.11
+							javax.servlet:javax.servlet-api:4.0.1	binRepo	central
+								group	javax.servlet
+								artifact	javax.servlet-api
+								version	4.0.1
+							junit:junit:4.12	binRepo	central
+								group	junit
+								artifact	junit
+								version	4.12
+							org.eclipse.jetty:jetty-server:8.1.19.v20160209	binRepo	central
+								group	org.eclipse.jetty
+								artifact	jetty-server
+								version	8.1.19.v20160209
+							org.eclipse.jetty:jetty-servlet:8.1.19.v20160209	binRepo	central
+								group	org.eclipse.jetty
+								artifact	jetty-servlet
+								version	8.1.19.v20160209
+							org.eclipse.jetty:jetty-servlets:8.1.19.v20160209	binRepo	central
+								group	org.eclipse.jetty
+								artifact	jetty-servlets
+								version	8.1.19.v20160209
+						resources	
+						bloopSpec	None
+				main	Some	core
+				license	unknown
+				description	
+				compiler	None
+		repos	.scala	id	.scala
+				repo	git@github.com:propensive/.scala.git
+				track	master
+				commit	94e03663a05fa2568b31e4315dea1e0d94513cc0
+				local	None
+			scalaj-http	id	scalaj-http
+				repo	git@github.com:scalaj/scalaj-http.git
+				track	master
+				commit	fb190d47c9f6cdb59132cda55e38d52b2764bc6d
+				local	None
+		imports	.scala:scala-2.12.8	repo	.scala
+				schema	scala-2.12.8
+		main	Some	scalaj-http
+main	default
+aliases	
