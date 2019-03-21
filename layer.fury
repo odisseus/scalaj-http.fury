@@ -20,7 +20,7 @@ schemas	default	id	default
 						bloopSpec	None
 					test	id	test
 						kind	Application
-						main	Some	org.junit.runner.JUnitCore
+						main	Some	AllTests
 						plugin	None
 						manifest	
 						compiler	projectId	scala
@@ -33,6 +33,7 @@ schemas	default	id	default
 								hidden	false
 						params	
 						sources	scalaj-http:src/test/scala	scalaj-http:src/test/scala
+							test	test
 						binaries	com.fasterxml.jackson.module:jackson-module-scala_2.12:2.9.7	binRepo	sonatype:releases
 								group	com.fasterxml.jackson.module
 								artifact	jackson-module-scala_2.12
