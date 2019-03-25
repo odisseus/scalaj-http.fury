@@ -74,9 +74,9 @@ schemas	default	id	default
 				commit	94e03663a05fa2568b31e4315dea1e0d94513cc0
 				local	None
 			scalaj-http	id	scalaj-http
-				repo	git@github.com:odisseus/scalaj-http.git
+				repo	git@github.com:scalaj/scalaj-http.git
 				track	master
-				commit	e3fb2dcfc93eeb05d55f52616a8b4f8508ae039b
+				commit	515d38eedf8e6d3701a7d2bc5313830a47a2bf29
 				local	None
 		imports	.scala:scala-2.12.8	repo	.scala
 				schema	scala-2.12.8
