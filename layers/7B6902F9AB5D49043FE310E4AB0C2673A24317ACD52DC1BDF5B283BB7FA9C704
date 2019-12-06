@@ -1,0 +1,114 @@
+version	4
+schemas	default	id	default
+		projects	scala	id	scala
+				modules	compiler	id	compiler
+						kind	Compiler
+						main	None
+						plugin	None
+						manifest	
+						compiler	projectId	java
+							moduleId	compiler
+							intransitive	false
+							hidden	false
+						after	
+						params	
+						sources	
+						binaries	org.scala-lang:scala-compiler:2.12.8	binRepo	central
+								group	org.scala-lang
+								artifact	scala-compiler
+								version	2.12.8
+						resources	
+						bloopSpec	Some	org	scala-lang.org
+								name	scala-compiler
+								version	2.12.8
+						environment	
+						properties	
+						policy	
+						hidden	false
+				main	Some	compiler
+				license	unknown
+				description	
+				compiler	None
+			scalaj-http	id	scalaj-http
+				modules	core	id	core
+						kind	Library
+						main	None
+						plugin	None
+						manifest	
+						compiler	projectId	scala
+							moduleId	compiler
+							intransitive	true
+							hidden	false
+						after	
+						params	
+						sources	scalaj-http:src/main/java	scalaj-http:src/main/java
+							scalaj-http:src/main/scala	scalaj-http:src/main/scala
+							src	src
+						binaries	
+						resources	
+						bloopSpec	None
+						environment	
+						properties	
+						policy	
+						hidden	false
+					test	id	test
+						kind	Library
+						main	Some	AllTests
+						plugin	None
+						manifest	
+						compiler	projectId	scala
+							moduleId	compiler
+							intransitive	true
+							hidden	false
+						after	scalaj-http/core	projectId	scalaj-http
+								moduleId	core
+								intransitive	false
+								hidden	false
+						params	
+						sources	scalaj-http:src/test/scala	scalaj-http:src/test/scala
+						binaries	com.fasterxml.jackson.module:jackson-module-scala_2.12:2.9.9	binRepo	central
+								group	com.fasterxml.jackson.module
+								artifact	jackson-module-scala_2.12
+								version	2.9.9
+							com.novocode:junit-interface:0.11	binRepo	central
+								group	com.novocode
+								artifact	junit-interface
+								version	0.11
+							junit:junit:4.12	binRepo	central
+								group	junit
+								artifact	junit
+								version	4.12
+							org.eclipse.jetty:jetty-server:8.2.0.v20160908	binRepo	central
+								group	org.eclipse.jetty
+								artifact	jetty-server
+								version	8.2.0.v20160908
+							org.eclipse.jetty:jetty-servlet:8.2.0.v20160908	binRepo	central
+								group	org.eclipse.jetty
+								artifact	jetty-servlet
+								version	8.2.0.v20160908
+							org.eclipse.jetty:jetty-servlets:8.2.0.v20160908	binRepo	central
+								group	org.eclipse.jetty
+								artifact	jetty-servlets
+								version	8.2.0.v20160908
+						resources	
+						bloopSpec	None
+						environment	
+						properties	
+						policy	
+						hidden	false
+				main	Some	test
+				license	unknown
+				description	
+				compiler	Some	projectId	scala
+						moduleId	compiler
+						intransitive	true
+						hidden	false
+		repos	scalaj-http	id	scalaj-http
+				repo	gh:scalaj/scalaj-http
+				track	master
+				commit	40c17af9b811064e0708c51991340f2a9a3fe8dd
+				local	None
+		imports	
+		main	Some	scalaj-http
+main	default
+aliases	
